@@ -1,19 +1,3 @@
-
-### Simple script to save and analise expesnses. 
-
-# From command line there are command line available:
-
-# add <amount> <descripton> -> adds expense to the list
-# report -> gives list of all expenses with discription
-# remove <expense ID> -> removes indicated expense from the list
-# importcsv <csv file> -> imports expenses form anothre csv file and appends it to the
-# exportpython -> prints out all entries in the list in python recognizable structure 
-
-
-
-
-
-
 import csv
 from dataclasses import dataclass
 from pickle import load, dump
@@ -140,6 +124,7 @@ def remove(id):
     for expense in expenses:
         if expense.id == id:
             expenses.remove(expense)
+            print('Item has been deleted')
             break
 
     print_report(expenses)
